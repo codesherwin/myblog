@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>My Blog</title>
+</head>
+<body>
+	{% load staticfiles %}
+	<h1>Welcome to my Blog!</h1>
+	
+	{% for post in blog_posts %}
+		<p>
+			Title: {{ post.title }}<br />
+			Author: {{ post.author }}<br />
+			Summary: {{ post.content }}<br />
+			Last Updated On: {{ post.updated }}
+		</p>
+	{% endfor %}
+	</ul>
+</body>
+</html>
